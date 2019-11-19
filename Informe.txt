@@ -1,2 +1,21 @@
+Integrantes:
+Sebastián Ibarra
+Javier Agustín Maldonado
+
+DFS:
+Implementamos el grafo dinámico para el depht first search, ya que creíamos que era el más indicado y utilizamos el método recursivo
+que teníamos claro que así iba a ser.
+Utilizamos dos funciones, una que recorre los nodos y otra que recorre las aristas y que se llama a sí misma.
+
+Prim:
+Para el algoritmo de Prim vimos más sencillo utilizar la implementación estática, porque necesitabamos hacer que el grafo no sea dirigido,
+entonces hicimos que en la matriz donde se coloca el peso de las aristas se colocara tanto en la posición [i][j] como en la posición [j][i]. De esta forma representamos al grafo no dirigido.
+Tuvimos que usar tres for, uno adentro de otro, es la manera más óptima que encontramos para hacerlo.
+
+Dijkstra:
+Este fue el algoritmo que más nos costó y tuvimos que ver información en internet para poder conseguirlo.
+Pusimos las distancias en Integer.MAX_VALUE ya que las distancias deben tener en un principio un valor de infinito que obviamente
+en java no se va a poder. De esta forma el numero siempre será mayor en una primera comparación.
+Utilizamos la clase de prioridad de colas que viene en java, que nos devuelve el peso de arista menor. 
 
 
