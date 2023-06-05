@@ -1,0 +1,10 @@
+# DFS, PRIM and DIJKSTRA algorithms
+
+This repository contains the source code of three algorithms for working with graphs: DFS, Prim and Dijkstra. Each of them has its own class and its own main method to execute them. The following is a brief description of the algorithms and the design decisions that were made.
+
+DFS: The Depth First Search algorithm traverses a graph by visiting the deepest possible nodes first. To implement it, a dynamic graph was used, i.e., one that can be modified at runtime, as it was considered to be the most suitable for this algorithm. In addition, a recursive version of the algorithm was used, which consists of calling a function that visits the nodes and another that visits the edges and calls itself with the adjacent nodes.
+
+Prim: Prim's algorithm is an algorithm for finding the minimum covering tree of a graph, i.e., the subgraph that connects all nodes with the smallest possible total weight. To implement it, a static graph was used, that is, one that cannot be modified at run time, since the graph needed to be undirected, and for this purpose the adjacency matrix was made symmetric, that is, the weight of the edge between nodes i and j was the same as the weight of the edge between nodes j and i. To find the minimum covering tree, three nested loops were used, which traverse the adjacency matrix and select the edges with the lowest weight that do not form cycles.
+
+Dijkstra: Dijkstra's algorithm is an algorithm for finding the shortest path between two nodes of a graph. To implement it, a static graph was used, since it was not necessary to modify it at run time. The distances of all nodes were initialized to Integer.MAX_VALUE, which represents an infinite value, since the actual distance between nodes is not known in principle. A priority queue was used, which is a data structure that returns the element with the lowest priority, in this case the node with the smallest distance. The algorithm extracts nodes from the queue and updates the distances of their adjacent nodes if they are less than the current distances.
+
